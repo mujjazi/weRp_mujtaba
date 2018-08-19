@@ -38,7 +38,7 @@ class TestOunass(unittest.TestCase):
 		self.ln.send_keys('Mehdi')
 
 		self.em = browser.find_element_by_name('email')
-		self.em.send_keys('randomd21nom@gmail.com')
+		self.em.send_keys('random22222d2221322nom@gmail.com')
 
 		self.num = browser.find_element_by_name('password')
 		self.num.send_keys('LaMadrid.1')
@@ -65,10 +65,22 @@ class TestOunass(unittest.TestCase):
 		self.emailn = browser.find_element_by_name('email')
 		
 		time.sleep(10)
-		self.assertEqual(emailn.is_enabled(),True)
+		self.assertEqual(self.emailn.is_enabled(),False)
+		self.assertEquals(self.emailn.get_attribute('value'),'random22222d2221322nom@gmail.com (not editable)')
+
+		print(self.emailn.get_attribute('value'))
 
 		time.sleep(10)
 	
+		self.phn = browser.find_element_by_name('phoneNumber')
+		self.phn.clear()
+		self.phn.send_keys('97167324238')
+
+		self.upd = browser.find_element_by_class_name('Profile-updateDetailsButton')
+
+		time.sleep(10)
+
+		#self.assertEquals(self.phn.get_attribute('textContent'),'97167324238')
 
 	def tearDown(self):
 
