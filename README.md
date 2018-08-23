@@ -1,5 +1,13 @@
 # weRp_mujtaba
 Website Automation with Selenium and Python
+
+*Note: This project is currently working with macOS Mojave 10.14 Beta using Python 2.7 and Selenium 3.13 64 bit*
+
+Downloads:
+Selenium: Install pip using Homebrew and then pip install selenium
+Python: https://www.python.org/downloads/mac-osx/ 
+Chrome Driver: https://chromedriver.storage.googleapis.com/index.html?path=2.41/
+
 Case 1: Front-end Automation
 
 Web site's URL is -> https://www.nisnass.ae/
