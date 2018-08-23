@@ -9,6 +9,8 @@ from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.keys import Keys
 from selenium.common.exceptions import NoSuchElementException
 from selenium.webdriver.common.action_chains import ActionChains
+from selenium import webdriver
+from selenium.webdriver.firefox.options import Options
 
 
 
@@ -16,7 +18,7 @@ class TestOunass(unittest.TestCase):
 
 	def setUp(self):
 		
-		self.browser = webdriver.Chrome()
+		self.browser = webdriver.Firefox()
 		self.browser.get('https://www.nisnass.ae/')
 
 
@@ -94,6 +96,8 @@ class TestOunass(unittest.TestCase):
 		self.search = browser.find_element_by_class_name('QuickSearch-textBox')
 		self.search.send_keys('Hydration Mask')
 		self.search.submit()
+
+		time.sleep(5)
 
 		self.prod= browser.find_element_by_class_name('Product-media')
 		self.prod.click()

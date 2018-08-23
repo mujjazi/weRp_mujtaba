@@ -16,7 +16,7 @@ class TestOunass(unittest.TestCase):
 
 	def setUp(self):
 		
-		self.browser = webdriver.Chrome()
+		self.browser = webdriver.Safari()
 		self.browser.get('https://www.nisnass.ae/')
 
 

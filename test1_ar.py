@@ -17,7 +17,7 @@ class TestOunass(unittest.TestCase):
 	def setUp(self):
 		
 		self.browser = webdriver.Chrome()
-		self.browser.get('https://www.nisnass.ae/')
+		self.browser.get('https://ar.nisnass.ae/')
 
 
 	def testregister(self):
@@ -57,7 +57,7 @@ class TestOunass(unittest.TestCase):
 
 		time.sleep(10)
 
-		browser.get('https://www.nisnass.ae/customer')
+		browser.get('https://ar.nisnass.ae/customer')
 
 		time.sleep(10)
 
