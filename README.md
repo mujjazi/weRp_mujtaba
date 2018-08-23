@@ -5,8 +5,11 @@ Website Automation with Selenium and Python
 
 Downloads:
 Selenium: Install pip using Homebrew and then pip install selenium
+
 Python: https://www.python.org/downloads/mac-osx/ 
+
 Chrome Driver: https://chromedriver.storage.googleapis.com/index.html?path=2.41/
+
 
 Case 1: Front-end Automation
 
