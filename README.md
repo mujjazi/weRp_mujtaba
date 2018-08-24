@@ -4,9 +4,13 @@
 
 ## Website Automation with Selenium and Python
 
-*Note: This project is currently working on Macbook Pro running on macOS Mojave 10.14 Beta using Python 2.7 and Selenium 3.13 64 bit, This project is also working on Toshiba Satellite P750 running on Windows 7 64 bit using Python 2.7 and Selenium 3.13 64 bit.*
+*Note: 
+This project is currently working on Macbook Pro running on macOS Mojave 10.14 Beta using Python 2.7 and Selenium 3.13 64 bit
+
+This project is also working on Toshiba Satellite P750 running on Windows 7 64 bit using Python 2.7 and Selenium 3.13 64 bit.*
 
 ## Installation and Downloads:
+
 Please follow the instructions mentioned in the below link based on your operating system.
 
 **Selenium**: https://selenium-python.readthedocs.io/installation.html
@@ -15,9 +19,13 @@ Please follow the instructions mentioned in the below link based on your operati
 *Note: Chrome, Firefox and Internet Explorer driver files have been included in the project and for different Opearating systems other than Windows, PLease download using the link provided below.*
 
 **Chrome Driver**: https://chromedriver.storage.googleapis.com/index.html?path=2.41/
+
 **Firefox Gecko Driver**: https://github.com/mozilla/geckodriver/releases
+
 **IEWebDriver**: http://selenium-release.storage.googleapis.com/index.html?path=3.13/
+
 **Safari**: https://selenium-python.readthedocs.io/installation.html
+
 **Edge**: https://selenium-python.readthedocs.io/installation.html
 
 
