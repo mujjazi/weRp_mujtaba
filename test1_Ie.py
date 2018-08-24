@@ -97,8 +97,8 @@ class TestOunass(unittest.TestCase):
 
 		time.sleep(10)
 		
-		#self.prod= browser.find_element_by_class_name('Product-media')
-		#self.prod.click()
+		self.prod= browser.find_element_by_class_name('Product-media')
+		self.prod.click()
 
 		time.sleep(5)
 
@@ -106,7 +106,7 @@ class TestOunass(unittest.TestCase):
 		self.btn.click()
 
 
-		time.sleep(5)
+		time.sleep(10)
 
 
 		#Classic Pumps code
@@ -115,12 +115,12 @@ class TestOunass(unittest.TestCase):
 		self.search.send_keys('Zitah Classic Pumps')
 		self.search.submit()
 
-		time.sleep(5)
+		time.sleep(10)
 		
 		self.prod= browser.find_element_by_class_name('Product-media')
 		self.prod.click()
 
-		time.sleep(5)
+		time.sleep(10)
 
 		self.color =  browser.find_element_by_css_selector("img[alt='color_Pink']")
 		self.color.click()
@@ -163,7 +163,7 @@ class TestOunass(unittest.TestCase):
 		self.btn = browser.find_element_by_class_name('PDP-addToBag')
 		self.btn.click()
 		
-		time.sleep(5)
+		time.sleep(10)
 
 		self.cl = browser.find_element_by_class_name('Popup-notificationBadge').click()
 		self.name = browser.find_elements_by_class_name('CartItem-name')
