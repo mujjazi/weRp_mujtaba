@@ -5,9 +5,9 @@
 ## Website Automation with Selenium and Python
 
 *Note: 
-This project is currently working on Macbook Pro running on macOS Mojave 10.14 Beta using Python 2.7 and Selenium 3.13 64 bit
+This project is currently working on Macbook Pro running on macOS Mojave 10.14 Beta using Python 2.7 and Selenium 3.13 64 bit*
 
-This project is also working on Toshiba Satellite P750 running on Windows 7 64 bit using Python 2.7 and Selenium 3.13 64 bit.*
+*This project is also working on Toshiba Satellite P750 running on Windows 7 64 bit using Python 2.7 and Selenium 3.13 64 bit.*
 
 ## Installation and Downloads:
 
