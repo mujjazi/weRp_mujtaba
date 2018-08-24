@@ -1,26 +1,28 @@
-# weRp_mujtaba
-Website Automation with Selenium and Python
+**weRp_mujtaba
+**Author: Mujtaba Mehdi**
+
+## Website Automation with Selenium and Python
 
 *Note: This project is currently working on Macbook Pro running on macOS Mojave 10.14 Beta using Python 2.7 and Selenium 3.13 64 bit, This project is also working on Toshiba Satellite P750 running on Windows 7 64 bit using Python 2.7 and Selenium 3.13 64 bit.*
 
 ## Installation and Downloads:
 Please follow the instructions mentioned in the below link based on your operating system.
 
-# Selenium: https://selenium-python.readthedocs.io/installation.html
+**Selenium**: https://selenium-python.readthedocs.io/installation.html
 
 
 *Note: Chrome, Firefox and Internet Explorer driver files have been included in the project and for different Opearating systems other than Windows, PLease download using the link provided below.*
 
-# Chrome Driver: https://chromedriver.storage.googleapis.com/index.html?path=2.41/
-# Firefox Gecko Driver: https://github.com/mozilla/geckodriver/releases
-# IEWebDriver: http://selenium-release.storage.googleapis.com/index.html?path=3.13/
-# Safari https://selenium-python.readthedocs.io/installation.html
-# Edge https://selenium-python.readthedocs.io/installation.html
+**Chrome Driver**: https://chromedriver.storage.googleapis.com/index.html?path=2.41/
+**Firefox Gecko Driver**: https://github.com/mozilla/geckodriver/releases
+**IEWebDriver**: http://selenium-release.storage.googleapis.com/index.html?path=3.13/
+**Safari**: https://selenium-python.readthedocs.io/installation.html
+**Edge**: https://selenium-python.readthedocs.io/installation.html
 
 
 ## Case 1: Front-end Automation
 
-# Web site's URL is -> https://www.nisnass.ae/
+**Web site's URL is** -> https://www.nisnass.ae/
 
 # 1.1 Register Account
 We need you to register an account on nisnass through automation
