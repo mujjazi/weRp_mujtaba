@@ -1,14 +1,18 @@
 # weRp_mujtaba
 Website Automation with Selenium and Python
 
-*Note: This project is currently working with macOS Mojave 10.14 Beta using Python 2.7 and Selenium 3.13 64 bit*
+*Note: This project is currently working on Macbook Pro running on macOS Mojave 10.14 Beta using Python 2.7 and Selenium 3.13 64 bit, This project is also working on Toshiba Satellite P750 running on Windows 7 64 bit using Python 2.7 and Selenium 3.13 64 bit.*
 
 Downloads:
 Selenium: Install pip using Homebrew and then pip install selenium
 
 Python: https://www.python.org/downloads/mac-osx/ 
 
+*Note: Chrome, Firefox and Internet Explorer driver files have been included in the project and for different Opearating systems other than Windows, PLease download using the link provided below.*
+
 Chrome Driver: https://chromedriver.storage.googleapis.com/index.html?path=2.41/
+Firefox Gecko Driver: https://github.com/mozilla/geckodriver/releases
+IEWebDriver: http://selenium-release.storage.googleapis.com/index.html?path=3.13/
 
 
 Case 1: Front-end Automation
@@ -32,3 +36,4 @@ https://www.nisnass.ae/shop-metallic-sandals-for-womens-212224468.html
 Size 40 into the bag 
 
 If these items are not available on website, please chose any other item with one size, different color and different size item. 
+
