@@ -91,9 +91,9 @@ class TestOunass(unittest.TestCase):
 
 		browser = self.browser
 
-		self.search = browser.find_element_by_class_name('QuickSearch-textBox')
-		self.search.send_keys('Hydration Mask')
-		self.search.submit()
+		#Searching for Hydration Masks
+
+		browser.get('https://ar.nisnass.ae/shop-quench-intense-hydration-mask-1-sheet-for-womens-212054000.html')
 
 		self.prod= browser.find_element_by_class_name('Product-media')
 		self.prod.click()
@@ -106,41 +106,38 @@ class TestOunass(unittest.TestCase):
 
 		time.sleep(5)
 
+		#Searching for Classic Pumps
 
-		#Classic Pumps code
+		browser.get('https://ar.nisnass.ae/shop-zitah-classic-pumps-for-womens-212061829.html')
 
-		self.search = browser.find_element_by_class_name('QuickSearch-textBox')
-		self.search.send_keys('Zitah Classic Pumps')
-		self.search.submit()
 
 		self.prod= browser.find_element_by_class_name('Product-media')
 		self.prod.click()
 
 		time.sleep(5)
 
-		self.color =  browser.find_element_by_css_selector("img[alt='color_Pink']")
-		self.color.click()
+		if driver.find_elements_by_css_selector("img[alt='color_Pink']"):
+			self.color =  browser.find_element_by_css_selector("img[alt='color_Pink']")
+			self.color.click()
 		
 		#self.size = browser.find_elements_by_class_name("SizeSelection-option")
 		#self.size.click()
 
-		self.el1 = browser.find_elements_by_class_name('SizeSelection-option')
-		#print(self.el)
+		if driver.find_elements_by_css_selector(".SizeSelection-option"):
+				self.el1 = browser.find_elements_by_class_name('SizeSelection-option')
 
-		for self.option in self.el1:
-    			#print(self.option.text)	
-    			if self.option.text == '9.5':
-        			self.option.click() # select() in earlier versions of webdriver
-        			break
+				for self.option in self.el1:
+    					if self.option.text == '9.5':
+        		   			self.option.click() # select() in earlier versions of webdriver
+        		   			break
 
 		self.btn = browser.find_element_by_class_name('PDP-addToBag')
 		self.btn.click()
 
-		#Sandals code
+		#Searching for Sandals
 
-		self.search = browser.find_element_by_class_name('QuickSearch-textBox')
-		self.search.send_keys('Sandals')
-		self.search.submit()
+		browser.get('https://ar.nisnass.ae/shop-metallic-sandals-for-womens-212224468.html')
+
 
 		self.prod= browser.find_element_by_class_name('Product-media')
 		self.prod.click()

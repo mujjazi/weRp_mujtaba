@@ -24,13 +24,17 @@ class TestOunass(unittest.TestCase):
 
 		browser = self.browser
 
+		#Clicking on the Account button to Sign up
+
 		self.account = browser.find_element_by_class_name('Popup-button')
 		self.account.click()
 
+		#Clicking the Sign Up button to open the registration form
 
 		self.signup = browser.find_element_by_class_name('SignInForm-signUpButton')
 		self.signup.click()
 
+		#Filling the registration Form
 
 		self.fn = browser.find_element_by_name('firstName')
 		self.fn.send_keys('Mujtaba')
@@ -38,7 +42,9 @@ class TestOunass(unittest.TestCase):
 		self.ln = browser.find_element_by_name('lastName')
 		self.ln.send_keys('Mehdi')
 
+		#Generating Random Email everytime otherwise user is unable to register with same email
 		rndem = ''.join(random.sample(string.ascii_lowercase, 6)) + '@gmail.com'
+		
 		self.em = browser.find_element_by_name('email')
 		self.em.send_keys(rndem)
 
@@ -50,23 +56,27 @@ class TestOunass(unittest.TestCase):
 
 		self.addr = browser.find_element_by_class_name('Profile-signUpButton')
 		self.addr.click()
-		a= 1
-			
-
 		
 
 		time.sleep(10)
+
+		#Navigating to the Account page to validate whether correct details have been stored
 
 		browser.get('https://www.nisnass.ae/customer')
 
 		time.sleep(10)
 
+		#Clicking the Edit button to view and verify the details
+
 		self.edit = browser.find_element_by_class_name('MyAccountPage-link')
 		self.edit.click()
+
+		#Storing the Email element to later verify that it is not editable
 
 		self.emailn = browser.find_element_by_name('email')
 		
 		time.sleep(10)
+		
 		self.assertEqual(self.emailn.is_enabled(),False)
 		self.assertEquals(self.emailn.get_attribute('value'),rndem +' (not editable)')
 
@@ -80,12 +90,14 @@ class TestOunass(unittest.TestCase):
 
 		self.phnu = browser.find_element_by_class_name('Profile-phoneNumber')
 		self.assertEquals(self.phnu.get_attribute('value'),'97167324238')
+		print(self.phnu.get_attribute('value'))
+
+		#Clicking on the update button to update the details
 
 		self.upd = browser.find_element_by_class_name('Profile-updateDetailsButton')
 
 		time.sleep(10)
 
-		
 	
 	def testbag(self):
 
