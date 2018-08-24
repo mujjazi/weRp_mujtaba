@@ -1,5 +1,4 @@
 import time
-import lxml
 import string, random
 import unittest
 from selenium import webdriver
@@ -97,18 +96,18 @@ class TestOunass(unittest.TestCase):
 		self.search.send_keys('Hydration Mask')
 		self.search.submit()
 
-		time.sleep(5)
+		time.sleep(10)
 
 		self.prod= browser.find_element_by_class_name('Product-media')
 		self.prod.click()
 
-		time.sleep(5)
+		time.sleep(10)
 
 		self.btn = browser.find_element_by_class_name('PDP-addToBag')
 		self.btn.click()
 
 
-		time.sleep(5)
+		time.sleep(15)
 
 
 		#Classic Pumps code
@@ -117,10 +116,12 @@ class TestOunass(unittest.TestCase):
 		self.search.send_keys('Zitah Classic Pumps')
 		self.search.submit()
 
+		time.sleep(10)
+		
 		self.prod= browser.find_element_by_class_name('Product-media')
 		self.prod.click()
 
-		time.sleep(5)
+		time.sleep(10)
 
 		self.color =  browser.find_element_by_css_selector("img[alt='color_Pink']")
 		self.color.click()
@@ -128,6 +129,8 @@ class TestOunass(unittest.TestCase):
 		#self.size = browser.find_elements_by_class_name("SizeSelection-option")
 		#self.size.click()
 
+		time.sleep(5)
+		
 		self.el1 = browser.find_elements_by_class_name('SizeSelection-option')
 		#print(self.el)
 
@@ -146,10 +149,12 @@ class TestOunass(unittest.TestCase):
 		self.search.send_keys('Sandals')
 		self.search.submit()
 
+		time.sleep(10)
+		
 		self.prod= browser.find_element_by_class_name('Product-media')
 		self.prod.click()
 
-		time.sleep(5)
+		time.sleep(10)
 
 		self.el = browser.find_elements_by_class_name('SizeSelection-option')
 		
@@ -163,7 +168,7 @@ class TestOunass(unittest.TestCase):
 		self.btn = browser.find_element_by_class_name('PDP-addToBag')
 		self.btn.click()
 		
-		time.sleep(5)
+		time.sleep(10)
 
 		self.cl = browser.find_element_by_class_name('Popup-notificationBadge').click()
 		self.name = browser.find_elements_by_class_name('CartItem-name')
