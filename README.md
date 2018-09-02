@@ -29,6 +29,9 @@ Please follow the instructions mentioned in the below link based on your operati
 **Edge**: https://selenium-python.readthedocs.io/installation.html
 
 
+**Note: The folders Test1 and Test2 contain all the files relevant to Case 1 and Case 2 respectively**
+
+
 ## Case 1: Front-end Automation
 
 **Web site's URL is** -> https://www.nisnass.ae/
@@ -64,3 +67,31 @@ Size 40 into the bag
 *If these items are not available on website, please chose any other item with one size, different color and different size item.* 
 
  
+ 
+## Case 2: Front-end Automation
+
+**Web site URL is** - > https://www.ounass.ae/
+
+## 2.1 Login through Facebook
+
+
+Click on to User icon in top left
+
+Click Amber button
+
+Click Facebook connect (Use any test Facebook account)
+
+Get your user authenticated
+
+Come back to website and verify user is successfully logged in
+
+## 2.2 Product Listing Page
+
+Verify when you go to product listing page i.e. Clothing etc. -> https://www.ounass.ae/clothing/
+
+After 72 items, “View More” should not automatically load more, but need to be clicked button at bottom which should load more items if there are more than 12 items in this page.
+
+After selecting “Christian Siriano” from filters only 2 results are found
+
+Verify products only with title “Christian Sirano” as a brand is displayed
+
