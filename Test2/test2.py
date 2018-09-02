@@ -76,10 +76,6 @@ class TestOunass(unittest.TestCase):
 		print browser.window_handles[1]
 		self.child = browser.window_handles[1]
 		browser.switch_to_window(self.child) 
-
-		# for handle in driver.window_handles:
-  #   			print handle
-  #   			#driver.switch_to.window(handle)
 	
 
 		self.fblgne = browser.find_element_by_name("email")
@@ -92,87 +88,52 @@ class TestOunass(unittest.TestCase):
 		self.fblgnb.click()
 
 
-	# def testbag(self):
+	def testproducts(self):
 
-	# 	browser = self.browser
+		browser = self.browser
+		browser.get('https://www.ounass.ae/clothing/')
 
-	# 	self.search = browser.find_element_by_class_name('QuickSearch-textBox')
-	# 	self.search.send_keys('Hydration Mask')
-	# 	self.search.submit()
+		try:
+    			self.elem = browser.find_element_by_id("onesignal-popover-cancel-button")
+    			self.elem.click()
+		except NoSuchElementException:  #spelling error making this code not work as expected
+    			pass
 
-	# 	self.prod= browser.find_element_by_class_name('Product-media')
-	# 	self.prod.click()
+		time.sleep(5)
 
-	# 	time.sleep(5)
+		items = browser.find_elements_by_class_name('product-item-wrapper')
 
-	# 	self.btn = browser.find_element_by_class_name('PDP-addToBag')
-	# 	self.btn.click()
-
-
-	# 	time.sleep(5)
-
-
-	# 	#Classic Pumps code
-
-	# 	self.search = browser.find_element_by_class_name('QuickSearch-textBox')
-	# 	self.search.send_keys('Zitah Classic Pumps')
-	# 	self.search.submit()
-
-	# 	self.prod= browser.find_element_by_class_name('Product-media')
-	# 	self.prod.click()
-
-	# 	time.sleep(5)
-
-	# 	self.color =  browser.find_element_by_css_selector("img[alt='color_Pink']")
-	# 	self.color.click()
-		
-	# 	#self.size = browser.find_elements_by_class_name("SizeSelection-option")
-	# 	#self.size.click()
-
-	# 	self.el1 = browser.find_elements_by_class_name('SizeSelection-option')
-	# 	#print(self.el)
-
-	# 	for self.option in self.el1:
- #    			#print(self.option.text)	
- #    			if self.option.text == '9.5':
- #        			self.option.click() # select() in earlier versions of webdriver
- #        			break
-
-	# 	self.btn = browser.find_element_by_class_name('PDP-addToBag')
-	# 	self.btn.click()
-
-	# 	#Sandals code
-
-	# 	self.search = browser.find_element_by_class_name('QuickSearch-textBox')
-	# 	self.search.send_keys('Sandals')
-	# 	self.search.submit()
-
-	# 	self.prod= browser.find_element_by_class_name('Product-media')
-	# 	self.prod.click()
-
-	# 	time.sleep(5)
-
-	# 	self.el = browser.find_elements_by_class_name('SizeSelection-option')
-		
-	# 	for self.option in self.el:
- #    			#print(self.option.text)	
- #    			if self.option.text == '8':
- #        			self.option.click() # select() in earlier versions of webdriver
- #        			break
 		
 
-	# 	self.btn = browser.find_element_by_class_name('PDP-addToBag')
-	# 	self.btn.click()
-		
-	# 	time.sleep(5)
+		time.sleep(10)
 
-	# 	self.cl = browser.find_element_by_class_name('Popup-notificationBadge').click()
-	# 	self.name = browser.find_elements_by_class_name('CartItem-name')
-		
-	# 	for element in browser.find_elements_by_class_name('CartItem-name'):
- #       			print element.text
 
-	# 	time.sleep(10)
+		elcon = browser.find_element_by_class_name('load-more')
+
+		hover = ActionChains(browser).move_to_element(elcon)
+		hover.perform()
+		time.sleep(10)
+
+		self.uitems = browser.find_elements_by_class_name('product-item-wrapper')
+
+		countbefore = len(self.uitems)
+
+		time.sleep(10)
+
+		elcon.click()
+
+
+
+		time.sleep(10)
+		
+		self.unitems = browser.find_elements_by_class_name('product-item-wrapper')
+
+
+		print(len(self.unitems))
+
+		countafter = len(self.unitems)
+
+		self.assertNotEquals(countbefore,countafter,'Erro! New items does not load')
 
 		def tearDown(self):
 
